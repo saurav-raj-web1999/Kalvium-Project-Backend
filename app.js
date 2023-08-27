@@ -53,9 +53,9 @@ app.get('*', async (req, res)=>{
             result: solution
         })
         const saveData = await newData.save();
-        res.send(`<h1>${expression} = ${solution}</h1>`);
+        res.render('output',{output : newData})
     } catch (error) {
-        console.log(error);
+        console.log();
     }
     
 })
