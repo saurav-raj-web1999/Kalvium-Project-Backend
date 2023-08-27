@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar bg-primary fs-5">
+    <div class="container-fluid">
+      <Calculator class="fs-2 navbar-text" style="color: #fff;">Online Calculator</span>
+
+    </div>
+  </nav>
+  <section class="container mt-4">
+
+    <table class="table table-striped">
+      <thead>
+        <tr class="table-dark">
+          <th scope="col">Index</th>
+          <th scope="col">Operation</th>
+          <th scope="col">Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i=0;i<record.length;i++) {%>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= record[i].operation %></td>
+            <td><%= record[i].result %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <div class="col-12 mt-4">
+      <a href="/" type="submit" class="btn btn-primary">Go Back</a>
+    </div>
+  </section>
+</body>
+
+</html>
